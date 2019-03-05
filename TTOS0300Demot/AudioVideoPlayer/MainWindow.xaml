@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AudioVideoPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" FontSize="18">
+        Title="Samson's AudioVideoPlayer" Height="450" Width="800" FontSize="18">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="f:\KT-ohjelmointi\testi.mp4" VerticalAlignment="Top" Width="300"/>
-        <Button Content="Play" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Stop" HorizontalAlignment="Left" Margin="115,38,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="txtFilename" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="f:\KT-ohjelmointi\testi.mp4" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="115,38,0,0" VerticalAlignment="Top" Width="100"/>
+        <MediaElement x:Name="MyMediaElement" HorizontalAlignment="Left" Height="300" Margin="10,71,0,0" VerticalAlignment="Top" Width="600"/>
 
     </Grid>
 </Window>
