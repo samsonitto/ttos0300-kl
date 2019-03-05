@@ -20,9 +20,55 @@ namespace AudioVideoPlayer
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Boolean isPlaying = false;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // videot soimaan
+                if (!isPlaying)
+                {
+                    MyMediaElement.Source = new Uri(txtFilename.Text);
+                    MyMediaElement.Play();
+                }
+                isPlaying = true;
+                // asetetaan nappien käytettävyyttä
+                btnPause.IsEnabled = true;
+                btnPlay.IsEnabled = false;
+                btnStop.IsEnabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void btnStop_Click(object sender, RoutedEventArgs e)
+        {
+            MyMediaElement.Stop();
+            isPlaying = false;
+            btnPause.IsEnabled = false;
+            btnPlay.IsEnabled = true;
+            btnStop.IsEnabled = false;
+        }
+
+        private void btnPause_Click(object sender, RoutedEventArgs e)
+        {
+            if (isPlaying)
+            {
+                MyMediaElement.Pause();
+                isPlaying = false;
+                btnPause.IsEnabled = false;
+                btnPlay.IsEnabled = true;
+                btnStop.IsEnabled = true;
+            }
+            
         }
     }
 }
