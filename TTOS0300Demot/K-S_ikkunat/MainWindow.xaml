@@ -7,19 +7,44 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="txtWidth" HorizontalAlignment="Left" Height="23" Margin="662,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Height="23" Margin="662,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtKarmiLev" HorizontalAlignment="Left" Height="23" Margin="662,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtWidth" HorizontalAlignment="Left" Height="23" Margin="662,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
+        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Height="23" Margin="662,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
+        <TextBox x:Name="txtKarmiLev" HorizontalAlignment="Left" Height="23" Margin="662,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center"/>
         <Label Content="Ikkunan Leveys (L):" HorizontalAlignment="Left" Margin="544,39,0,0" VerticalAlignment="Top"/>
         <Label Content="Ikkunan Korkeus (H):" HorizontalAlignment="Left" Margin="535,67,0,0" VerticalAlignment="Top"/>
         <Label Content="Karmipuun leveys (W):" HorizontalAlignment="Left" Margin="525,94,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnCount" Content="Laske pinta-ala ja piiri" HorizontalAlignment="Left" Margin="626,125,0,0" VerticalAlignment="Top" Width="156" Height="26" Click="btnCount_Click"/>
-        <TextBlock x:Name="txbA" HorizontalAlignment="Left" Margin="702,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
-        <TextBlock x:Name="txbP" HorizontalAlignment="Left" Margin="702,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
-        <TextBlock x:Name="txbKA" HorizontalAlignment="Left" Margin="702,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
+        <TextBlock x:Name="txbA" HorizontalAlignment="Left" Margin="702,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23" TextAlignment="Center"/>
+        <TextBlock x:Name="txbP" HorizontalAlignment="Left" Margin="702,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23" TextAlignment="Center"/>
+        <TextBlock x:Name="txbKA" HorizontalAlignment="Left" Margin="702,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23" TextAlignment="Center"/>
         <Label Content="Ikkunan pinta-ala:" HorizontalAlignment="Left" Margin="593,170,0,0" VerticalAlignment="Top"/>
         <Label Content="Karmin piiri:" HorizontalAlignment="Left" Margin="624,254,0,0" VerticalAlignment="Top"/>
         <Label Content="Karmin pinta-ala:" HorizontalAlignment="Left" Margin="597,282,0,0" VerticalAlignment="Top"/>
-
+        <Rectangle Fill="#FF64FFFF" HorizontalAlignment="Left" Height="267" Margin="41,41,0,0" Stroke="#FF641919" VerticalAlignment="Top" Width="433" StrokeThickness="10"/>
+        <Grid Height="100" Width="10" RenderTransformOrigin="0.5,0.5" Margin="465,68,317,251">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+            <Line Grid.Row="0" Y1="0" Y2="35" X1="0" X2="0" Stroke="Black" StrokeThickness="1" HorizontalAlignment="Center" Margin="5,-2,5,2" />
+            <Path Data="M0,0 L5,10 L10,0Z" Stroke="Black" Fill="Black" StrokeThickness="1" HorizontalAlignment="Center" Height="10.917" Margin="-0.5,33,-0.5,0" VerticalAlignment="Top" Grid.RowSpan="2" Stretch="Fill" />
+            <Path Grid.Row="2" Data="M0,10 L5,0 L10,10" StrokeThickness="1" HorizontalAlignment="Center" Fill="Black" Margin="0,8.833,0,0" Grid.RowSpan="2" Stretch="Fill" />
+            <Line Grid.Row="4" Y1="0" Y2="35" X1="0" X2="0" Stroke="Black" StrokeThickness="1" HorizontalAlignment="Center" />
+            
+        </Grid>
+        <Label Content="W" HorizontalAlignment="Left" Margin="401,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="L" HorizontalAlignment="Left" Margin="251,47,0,0" VerticalAlignment="Top"/>
+        <Label Content="H" HorizontalAlignment="Left" Margin="49,155,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -27,12 +27,12 @@ namespace K_S_ikkunat
 
         private void btnCount_Click(object sender, RoutedEventArgs e)
         {
-            int ikkunaLev;
-            int ikkunaKor;
-            int karmiLev;
+            int ikkunaLev = 0;
+            int ikkunaKor = 0;
+            int karmiLev = 0;
             try
             {
-                Int32.TryParse(txtWidth.Text, out ikkunaLev);
+                ikkunaLev = int.Parse(txtWidth.Text);
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace K_S_ikkunat
             }
             try
             {
-                Int32.TryParse(txtHeight.Text, out ikkunaKor);
+                ikkunaKor = int.Parse(txtHeight.Text);
             }
             catch (Exception ex)
             {
@@ -48,13 +48,21 @@ namespace K_S_ikkunat
             }
             try
             {
-                Int32.TryParse(txtKarmiLev.Text, out karmiLev);
+                karmiLev = int.Parse(txtKarmiLev.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
+            int A = (ikkunaLev + karmiLev) * (ikkunaKor + karmiLev);
+            txbA.Text = A.ToString();
+
+            int P = ((ikkunaLev + ikkunaKor) + karmiLev * 2) * 2;
+            txbP.Text = P.ToString();
+
+            int KA = A - ikkunaKor * ikkunaLev;
+            txbKA.Text = KA.ToString();
 
         }
     }
