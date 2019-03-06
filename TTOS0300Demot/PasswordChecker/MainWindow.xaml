@@ -1,0 +1,20 @@
+﻿<Window x:Class="PasswordChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordChecker"
+        mc:Ignorable="d"
+        Title="Samson's Password Checker" Height="450" Width="800" FontSize="14">
+    <Grid>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="10,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" TextChanged="txtPassword_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tarkistettava salasana:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbTotal" HorizontalAlignment="Left" Margin="10,56,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbMessage" HorizontalAlignment="Left" Margin="10,345,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="772" FontSize="48" Foreground="Black" Background="#FF92FFFA"/>
+        <TextBlock x:Name="txbCaps" HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbSmall" HorizontalAlignment="Left" Margin="10,104,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbNumbers" HorizontalAlignment="Left" Margin="10,128,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbSpecialChars" HorizontalAlignment="Left" Margin="10,152,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
