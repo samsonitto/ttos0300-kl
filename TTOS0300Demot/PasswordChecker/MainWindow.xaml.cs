@@ -90,7 +90,7 @@ namespace PasswordChecker
                 message = "GOOD";
             }
 
-            else if (lkmTotal > 10 && lkmNum > 0)
+            else if (lkmTotal > 10 && lkmNum > 0 || lkmTotal > 10 && lkmNum > 0 && lkmSpecial > 0 || lkmTotal > 10 && lkmNum > 0 && lkmCaps > 0 || lkmTotal > 10 && lkmSpecial > 0)
             {
                 color = Colors.Yellow;
                 message = "FAIR";

@@ -1,0 +1,25 @@
+﻿<Window x:Class="K_S_ikkunat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:K_S_ikkunat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtWidth" HorizontalAlignment="Left" Height="23" Margin="662,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Height="23" Margin="662,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtKarmiLev" HorizontalAlignment="Left" Height="23" Margin="662,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Ikkunan Leveys (L):" HorizontalAlignment="Left" Margin="544,39,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ikkunan Korkeus (H):" HorizontalAlignment="Left" Margin="535,67,0,0" VerticalAlignment="Top"/>
+        <Label Content="Karmipuun leveys (W):" HorizontalAlignment="Left" Margin="525,94,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCount" Content="Laske pinta-ala ja piiri" HorizontalAlignment="Left" Margin="626,125,0,0" VerticalAlignment="Top" Width="156" Height="26" Click="btnCount_Click"/>
+        <TextBlock x:Name="txbA" HorizontalAlignment="Left" Margin="702,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
+        <TextBlock x:Name="txbP" HorizontalAlignment="Left" Margin="702,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
+        <TextBlock x:Name="txbKA" HorizontalAlignment="Left" Margin="702,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF64FFFF" Width="80" Height="23"/>
+        <Label Content="Ikkunan pinta-ala:" HorizontalAlignment="Left" Margin="593,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Karmin piiri:" HorizontalAlignment="Left" Margin="624,254,0,0" VerticalAlignment="Top"/>
+        <Label Content="Karmin pinta-ala:" HorizontalAlignment="Left" Margin="597,282,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

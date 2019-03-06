@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioVideoPlayer", "AudioVi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordChecker", "PasswordChecker\PasswordChecker.csproj", "{3E07F6A1-0967-479B-8854-59DFBE3286A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K-S_ikkunat", "K-S_ikkunat\K-S_ikkunat.csproj", "{74F82D3E-9380-4A99-A41F-87C5531497B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E07F6A1-0967-479B-8854-59DFBE3286A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E07F6A1-0967-479B-8854-59DFBE3286A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E07F6A1-0967-479B-8854-59DFBE3286A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
