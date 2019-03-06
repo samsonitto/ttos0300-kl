@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,20 @@ namespace AudioVideoPlayer
                 btnStop.IsEnabled = true;
             }
             
+        }
+
+        private void btnBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            // käytetään valmista windowsin omaa Open-dialogia
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.InitialDirectory = "d:\\";
+            dlg.Filter = "Media files (*.mp4)|*mp4|Audio Files (*.mp3)|*.mp3|All files (*.*)|*.*";
+            dlg.RestoreDirectory = true;
+            Nullable<bool> result = dlg.ShowDialog(); // näyttää dialogin
+            if (result == true)
+            {
+                txtFilename.Text = dlg.FileName;
+            }
         }
     }
 }

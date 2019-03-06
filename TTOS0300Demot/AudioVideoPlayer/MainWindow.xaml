@@ -16,6 +16,7 @@
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="230,38,0,0" VerticalAlignment="Top" Width="100" Click="btnStop_Click" IsEnabled="False"/>
         <MediaElement x:Name="MyMediaElement" HorizontalAlignment="Left" Height="300" Margin="10,71,0,0" VerticalAlignment="Top" Width="600" LoadedBehavior="Manual"/>
         <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="115,38,0,0" VerticalAlignment="Top" Width="110" Click="btnPause_Click" IsEnabled="False"/>
+        <Button x:Name="btnBrowse" Content="Browse" HorizontalAlignment="Left" Margin="344,10,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="btnBrowse_Click"/>
 
     </Grid>
 </Window>
