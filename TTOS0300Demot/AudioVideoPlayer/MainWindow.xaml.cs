@@ -22,9 +22,17 @@ namespace AudioVideoPlayer
     public partial class MainWindow : Window
     {
         private Boolean isPlaying = false;
+        enum MusicPlays
+        {
+            Stop,
+            Play,
+            Pause
+        }
+        MusicPlays musicPlays;
         public MainWindow()
         {
             InitializeComponent();
+            musicPlays = MusicPlays.Stop;
         }
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
@@ -34,10 +42,14 @@ namespace AudioVideoPlayer
                 // videot soimaan
                 if (!isPlaying)
                 {
-                    MyMediaElement.Source = new Uri(txtFilename.Text);
+                    if (musicPlays == MusicPlays.Stop)
+                    {
+                        MyMediaElement.Source = new Uri(txtFilename.Text);
+                    }
                     MyMediaElement.Play();
                 }
                 isPlaying = true;
+                musicPlays = MusicPlays.Play;
                 // asetetaan nappien käytettävyyttä
                 btnPause.IsEnabled = true;
                 btnPlay.IsEnabled = false;
@@ -54,6 +66,7 @@ namespace AudioVideoPlayer
         {
             MyMediaElement.Stop();
             isPlaying = false;
+            musicPlays = MusicPlays.Stop;
             btnPause.IsEnabled = false;
             btnPlay.IsEnabled = true;
             btnStop.IsEnabled = false;
@@ -65,6 +78,7 @@ namespace AudioVideoPlayer
             {
                 MyMediaElement.Pause();
                 isPlaying = false;
+                musicPlays = MusicPlays.Pause;
                 btnPause.IsEnabled = false;
                 btnPlay.IsEnabled = true;
                 btnStop.IsEnabled = true;
