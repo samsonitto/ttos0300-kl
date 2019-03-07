@@ -33,11 +33,13 @@ namespace PasswordChecker
             int lkmSmall = 0;
             int lkmNum = 0;
             int lkmSpecial = 0;
+            int luokkaMerkki = 0;
             for (int i = 0; i < txtPassword.Text.Length; i++)
             {
                 if (char.IsUpper(txtPassword.Text[i]))
                 {
                     lkmCaps++;
+                    luokkaMerkki++;
                 }
                 else if (char.IsLower(txtPassword.Text[i]))
                 {
@@ -46,36 +48,15 @@ namespace PasswordChecker
                 else if (char.IsNumber(txtPassword.Text[i]))
                 {
                     lkmNum++;
+                    luokkaMerkki++;
                 }
                 else
                 {
                     lkmSpecial++;
+                    luokkaMerkki++;
                 }
             }
 
-            //for (int i = 0; i < txtPassword.Text.Length; i++)
-            //{
-            //    if (char.IsLower(txtPassword.Text[i]))
-            //    {
-            //        lkmSmall++;
-            //    }
-            //}
-
-            //for (int i = 0; i < txtPassword.Text.Length; i++)
-            //{
-            //    if (char.IsNumber(txtPassword.Text[i]))
-            //    {
-            //        lkmNum++;
-            //    }
-            //}
-
-            //for (int i = 0; i < txtPassword.Text.Length; i++)
-            //{
-            //    if (char.IsSymbol(txtPassword.Text[i]))
-            //    {
-            //        lkmSpecial++;
-            //    }
-            //}
             txbTotal.Text = "Merkkejä: " + lkmTotal;
             txbCaps.Text = "Isoja kirjaimia: " + lkmCaps;
             txbSmall.Text = "Pieniä kirjaimia: " + lkmSmall;
@@ -87,12 +68,19 @@ namespace PasswordChecker
             if (lkmTotal > 10 && lkmCaps > 0 && lkmNum > 0 && lkmSpecial > 0)
             {
                 color = Colors.Green;
-                message = "GOOD";
+                message = "SECURE";
             }
 
-            else if (lkmTotal > 10 && lkmNum > 0 || lkmTotal > 10 && lkmNum > 0 && lkmSpecial > 0 || lkmTotal > 10 && lkmNum > 0 && lkmCaps > 0 || lkmTotal > 10 && lkmSpecial > 0)
+            else if (lkmTotal > 10 && luokkaMerkki >= 6)
             {
                 color = Colors.Yellow;
+                message = "GOOD";
+
+            }
+
+            else if (lkmTotal > 10 && luokkaMerkki >= 3)//lkmTotal > 10 && lkmNum > 0 || lkmTotal > 10 && lkmNum > 0 && lkmSpecial > 0 || lkmTotal > 10 && lkmNum > 0 && lkmCaps > 0 || lkmTotal > 10 && lkmSpecial > 0)
+            {
+                color = Colors.Orange;
                 message = "FAIR";
             }
             else
