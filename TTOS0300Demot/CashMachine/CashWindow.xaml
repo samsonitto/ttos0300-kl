@@ -1,0 +1,20 @@
+﻿<Window x:Class="CashMachine.CashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CashMachine"
+        mc:Ignorable="d"
+        Title="Pay With Cash" Height="200" Width="220" FontFamily="Segoe UI Semibold" FontSize="16" Activated="Window_Activated">
+    <Grid>
+        <StackPanel Background="Pink">
+            <TextBlock x:Name="txbTotal" Text="Yhteensä:" Margin="5,0,5,0"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Saatu:" Margin="5,0,5,0"/>
+                <TextBox x:Name="txtMoney" Width="60" TextChanged="txtMoney_TextChanged"/>
+            </StackPanel>
+            <TextBlock x:Name="txbBack" Text="Takaisin:" Margin="5,0,5,0"/>
+            <Button x:Name="btnPaid" Content="Maksettu" Width="120" Margin="0,20,0,0" Click="btnPaid_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

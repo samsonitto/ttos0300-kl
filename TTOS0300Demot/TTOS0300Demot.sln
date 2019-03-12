@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordChecker", "Password
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K-S_ikkunat", "K-S_ikkunat\K-S_ikkunat.csproj", "{74F82D3E-9380-4A99-A41F-87C5531497B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashMachine", "CashMachine\CashMachine.csproj", "{E3BFDE81-9219-4725-A32F-102F104EB904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74F82D3E-9380-4A99-A41F-87C5531497B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3BFDE81-9219-4725-A32F-102F104EB904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3BFDE81-9219-4725-A32F-102F104EB904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3BFDE81-9219-4725-A32F-102F104EB904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3BFDE81-9219-4725-A32F-102F104EB904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
