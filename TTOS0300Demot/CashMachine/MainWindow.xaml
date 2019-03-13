@@ -5,21 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CashMachine"
         mc:Ignorable="d"
-        Title="TTOS0300 CashMacine" Height="400" Width="400" ResizeMode="NoResize">
+        Title="TTOS0300 CashMacine" Height="400" Width="400" ResizeMode="NoResize" FontSize="16">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <!-- vasemman puoleinen paneeli sisältää myytävät tuotteet-->
-            <StackPanel Background="Pink" Width="90">
+            <StackPanel Background="Pink" Width="150">
+                <TextBlock Text="Tuotteet:" FontFamily="Segoe UI Black" Margin="5"/>
+                <ListBox x:Name="lstProducts" Margin="5" SelectionChanged="lstProducts_SelectionChanged"/>
+                <!--
                 <Button Content="Kahvi 1,50€" Margin="5" Click="Button_Click"></Button>
                 <Button Content="Tee 1,10€" Margin="5" Click="Button_Click"></Button>
                 <Button Content="Pulla 1,60€" Margin="5" Click="Button_Click"></Button>
                 <Button Content="Sämpylä 2,50€" Margin="5" Click="Button_Click"></Button>
                 <Button Content="Suklaa 1,30€" Margin="5" Click="Button_Click"></Button>
+                -->
             </StackPanel>
             <!--oikeanpuoleinen paneeli näyttää valitut tuotteet listassa-->
-            <StackPanel Background="Gold" Width="300">
+            <StackPanel Background="Gold" Width="230">
                 <TextBlock Text="ostokset:" FontFamily="Segoe UI Black" Margin="5"/>
-                <ListBox x:Name="lstItems"></ListBox>
+                <ListBox x:Name="lstItems" SelectionChanged="lstItems_SelectionChanged"></ListBox>
                 <TextBlock x:Name="txbTotal" Text="yhteensä:" FontFamily="Segoe UI Black" Margin="5"/>
                 <Button x:Name="btnPaidWithCash" Content="Maksu käteisellä" FontFamily="Segoe UI Black" Margin="5" Click="btnPaidWithCash_Click"/>
                 <Button x:Name="btnPaidWithCard" Content="Maksu kortilla" FontFamily="Segoe UI Black" Margin="5"/>

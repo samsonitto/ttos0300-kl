@@ -24,6 +24,20 @@ namespace CashMachine
         public MainWindow()
         {
             InitializeComponent();
+            IniMyStuff();
+        }
+
+        private void IniMyStuff()
+        {
+            //lisätään muutama tuote listaan
+            Product p1 = new Product("Kahvi", 1.5F);
+            lstProducts.Items.Add(p1);
+            Product p2 = new Product("Tee", 1.1F);
+            lstProducts.Items.Add(p2);
+            lstProducts.Items.Add(new Product("Pulla", 1.6F));
+            lstProducts.Items.Add(new Product("Sämpylä", 2.5F));
+            lstProducts.Items.Add(new Product("Suklaa", 1.3F));
+            lstProducts.Items.Add(new Product("Blowjob", 10F));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -67,6 +81,42 @@ namespace CashMachine
             //tyhjennetään lista ja nollataan summa
             lstItems.Items.Clear();
             summa = 0;
+            txbTotal.Text = "Yhteensä: " + summa.ToString("C");
+        }
+
+        private void lstProducts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Object selected = lstProducts.SelectedItem;
+            //kastaus eli tyyppimuunnos Product-tyypiksi
+            if(selected is Product)
+            {
+                Product product = (Product)selected;
+                lstItems.Items.Add(product);
+                CountSum();
+            }
+             
+        }
+
+        private void lstItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //poistetaan valittu ostos listasta
+            //Object selected = lstItems.SelectedItem;
+            //lstItems.Items.Remove(selected);
+            //tai lyhyesti
+            lstItems.Items.Remove(lstItems.SelectedItem);
+            CountSum();
+        }
+
+        private void CountSum()
+        {
+            //lasketaan ostosten summa listassa olevista Product-olioista
+            summa = 0;
+            foreach(var item in lstItems.Items)
+            {
+                Product product = (Product)item;
+                summa += product.Price;
+            }
+            //näytetään ostosten yhteishinta
             txbTotal.Text = "Yhteensä: " + summa.ToString("C");
         }
     }
