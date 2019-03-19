@@ -1,0 +1,16 @@
+﻿<Window x:Class="BirdieInClouds.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirdieInClouds"
+        mc:Ignorable="d"
+        Title="Birdie" Height="788" Width="1275" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="sky.png"/>
+        </Grid.Background>
+        <Image x:Name="imgBird" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="BirdBlack.png" Margin="78,74,0,0"/>
+        <TextBlock x:Name="txbMsg" Text="..." Margin="10,10,1140,702"/>
+    </Grid>
+</Window>
