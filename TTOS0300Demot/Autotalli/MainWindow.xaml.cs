@@ -31,7 +31,6 @@ namespace Autotall1
             dgCars.ItemsSource = JAMK.IT.TTOS0300.Autotalli.HaeAutot();
             foreach(Auto item in JAMK.IT.TTOS0300.Autotalli.HaeAutot())
             {
-                
                 cbMerkki.Items.Add(item.Merkki);
             }
             

@@ -11,6 +11,6 @@
             <ImageBrush ImageSource="sky.png"/>
         </Grid.Background>
         <Image x:Name="imgBird" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="BirdBlack.png" Margin="78,74,0,0"/>
-        <TextBlock x:Name="txbMsg" Text="..." Margin="10,10,1140,702"/>
+        <TextBlock x:Name="txbMsg" Text="..." Margin="10,24,0,470" VerticalAlignment="Center" HorizontalAlignment="Left" Height="263" Width="795"/>
     </Grid>
 </Window>

@@ -50,6 +50,7 @@ namespace JAMK.IT.TTOS0300
             autot.Add(new Auto("Audi", "A4", 2017, 20000, 39900F, "audiA4.jpg"));
             autot.Add(new Auto("Lada", "Niva", 2018, 5000, 30000F, "ladaNiva.jpg"));
             return autot;
+
         }
     }
 }
