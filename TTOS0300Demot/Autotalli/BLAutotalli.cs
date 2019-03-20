@@ -49,6 +49,7 @@ namespace JAMK.IT.TTOS0300
             autot.Add(new Auto("Tesla", "Model Y", 2020, 0, 50000F, "teslaY.jpg"));
             autot.Add(new Auto("Audi", "A4", 2017, 20000, 39900F, "audiA4.jpg"));
             autot.Add(new Auto("Lada", "Niva", 2018, 5000, 30000F, "ladaNiva.jpg"));
+            autot.Add(new Auto("Renault", "Clio", 2012, 200000, 5000F,""));
             return autot;
 
         }

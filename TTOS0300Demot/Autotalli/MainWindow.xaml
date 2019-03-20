@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal" Background="LightGray">
                 <Button x:Name="btnGetAllCars" Content="Hae kaikki autot" Margin="10" Width="120" Click="BtnGetAllCars_Click"/>
-                <Button x:Name="btnGetTeslas" Content="Hae teslat" Margin="10" Width="120"/>
+                <Button x:Name="btnGetTeslas" Content="Hae teslat" Margin="10" Width="120" Click="btnGetTeslas_Click"/>
                 <ComboBox x:Name="cbMerkki" Margin="10" Width="100" SelectionChanged="CbMerkki_SelectionChanged"/>
             </StackPanel>
             <DataGrid x:Name="dgCars" SelectionChanged="DgCars_SelectionChanged"/>
