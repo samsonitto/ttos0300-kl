@@ -12,9 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using iTool;
 
-namespace iTool
+namespace Wpf3Birds
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,15 +23,20 @@ namespace iTool
         public MainWindow()
         {
             InitializeComponent();
-
+            IniMyStuff();
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        private void IniMyStuff()
         {
-            RegisterWindow register = new RegisterWindow();
-            register.Show();
-            this.Close();
-            
+            lstData.DataContext = BirdViewModel.Get3TestBirds();
+        }
+
+        private void Image_MouseEnter(object sender, MouseEventArgs e)
+        {
+            //asetetaan oikean puoleisen stackpanelin datacontestiksi hiiren alla oleva Lintu-olio
+            var kuva = sender as Image;
+            Bird lintu = kuva.DataContext as Bird;
+            spRight.DataContext = lintu;
         }
     }
 }

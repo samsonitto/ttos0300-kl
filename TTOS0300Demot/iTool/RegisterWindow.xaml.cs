@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,27 @@ namespace iTool
         public RegisterWindow()
         {
             InitializeComponent();
-            var result = payment.Select(p => p.Distinct());
-            cbPayment.ItemsSource = result;
+            cbPayment.ItemsSource = payment;
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void btnBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.InitialDirectory = "c:\\";
+            dlg.Filter = "Image files (*.jpg *.png)|*jpg *png|All files (*.*)|*.*";
+            dlg.RestoreDirectory = true;
+            Nullable<bool> result = dlg.ShowDialog(); // näyttää dialogin
+            if (result == true)
+            {
+                txtPic.Text = dlg.FileName;
+            }
         }
     }
 }

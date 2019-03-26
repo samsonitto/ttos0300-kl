@@ -1,0 +1,31 @@
+﻿<Window x:Class="Wpf3Birds.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf3Birds"
+        mc:Ignorable="d"
+        Title="WPFBirds" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <ListBox x:Name="lstData" ItemsSource="{Binding}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="3" Text="{Binding Name}"/>
+                            <Image Margin="3" Source="{Binding ImgFile}" Height="35" MouseEnter="Image_MouseEnter"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!--Oikealla puolella esitetään lintu isolla kuvalla ja teksteillä-->
+            <StackPanel x:Name="spRight">
+                <TextBlock>Nimi:</TextBlock>
+                <TextBlock Text="{Binding Name}" FontSize="20"/>
+                <TextBlock>Hinta:</TextBlock>
+                <TextBlock Text="{Binding Value}" FontSize="20"/>
+                <Image Source="{Binding ImgFile}" Stretch="Fill"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

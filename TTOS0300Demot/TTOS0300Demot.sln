@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdieInClouds", "BirdieInC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTool", "iTool\iTool.csproj", "{D3C660EA-88EE-415B-A0DE-DB42680F7319}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf3Birds", "Wpf3Birds\Wpf3Birds.csproj", "{36DFFA1C-D3C9-453D-BD00-5DE8575AAD21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D3C660EA-88EE-415B-A0DE-DB42680F7319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C660EA-88EE-415B-A0DE-DB42680F7319}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C660EA-88EE-415B-A0DE-DB42680F7319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DFFA1C-D3C9-453D-BD00-5DE8575AAD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DFFA1C-D3C9-453D-BD00-5DE8575AAD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DFFA1C-D3C9-453D-BD00-5DE8575AAD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DFFA1C-D3C9-453D-BD00-5DE8575AAD21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,9 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using iTool;
 
-namespace iTool
+namespace MVVMDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,15 +23,11 @@ namespace iTool
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        private void dgStudents_Loaded(object sender, RoutedEventArgs e)
         {
-            RegisterWindow register = new RegisterWindow();
-            register.Show();
-            this.Close();
-            
+
         }
     }
 }
