@@ -23,6 +23,7 @@ namespace MVVMDemo.ViewModel
             students.Add(new Student { FirstName = "John", LastName = "Doe" });
             students.Add(new Student { FirstName = "Linda", LastName = "Liukas" });
             students.Add(new Student { FirstName = "Lorppa", LastName = "Huuli" });
+            students.Add(new Student { FirstName = "Lala", LastName = "Lolo" });
             Students = students;
         }
     }

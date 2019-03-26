@@ -20,14 +20,28 @@ namespace MVVMDemo
     /// </summary>
     public partial class MainWindow : Window
     {
+        //MEMBER FIELDS
+        MVVMDemo.ViewModel.StudentViewModel svm = new ViewModel.StudentViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            svm.LoadTestStudents();
         }
 
         private void dgStudents_Loaded(object sender, RoutedEventArgs e)
         {
+            dgStudents.DataContext = svm.Students;
+        }
 
+        private void btnAddNew_Click(object sender, RoutedEventArgs e)
+        {
+            //lisätään uusi Student-oli Students-kokoelmaan
+            Model.Student uusiOppilas = new Model.Student();
+            uusiOppilas.FirstName = txtFirstName.Text;
+            uusiOppilas.LastName = txtLastName.Text;
+            svm.Students.Add(uusiOppilas);
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
         }
     }
 }
