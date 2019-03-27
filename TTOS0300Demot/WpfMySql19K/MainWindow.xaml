@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfMySql19K.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMySql19K"
+        mc:Ignorable="d"
+        Title="Kaverit from mysql.labranet" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Button x:Name="btnGetData" Content="Hae oppilaat MySql-palvemilta" Click="btnGetData_Click" DockPanel.Dock="Top"/>
+            <DataGrid x:Name="dgStudents" ItemsSource="{Binding}"/>
+        </DockPanel>
+    </Grid>
+</Window>
