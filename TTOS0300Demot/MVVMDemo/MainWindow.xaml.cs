@@ -43,5 +43,10 @@ namespace MVVMDemo
             txtFirstName.Text = "";
             txtLastName.Text = "";
         }
+
+        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            StudentViewControl.DataContext = svm;
+        }
     }
 }
