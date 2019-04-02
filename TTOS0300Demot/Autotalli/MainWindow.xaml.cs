@@ -29,7 +29,6 @@ namespace Autotall1
             autot = JAMK.IT.TTOS0300.Autotalli.HaeAutot();
             //comboboksiin eri automerkit
             //VE1 kovakoodaus
-            //List<string> merkit = new List<string>() { "Tesla", "Audi", "Lada" };
             //VE2 kysytään LINQlla eri automerkit
             var result = autot.Select(m => m.Merkki).Distinct();
             cbMerkki.ItemsSource = result;
@@ -54,16 +53,7 @@ namespace Autotall1
                 Auto auto = (Auto)selected; //kastataan selected Auto-olioksi
                 ShowPicture(auto.URL);
             }
-            //Object selected = dgCars.SelectedItem;
-            //if (selected is Auto)
-            //{
-            //    Auto kuva = (Auto)selected;
-            //    string path = $"images/{kuva.URL.ToString()}";
-            //    ImageSourceConverter imgs = new ImageSourceConverter();
-            //    Uri uri = new Uri(path, UriKind.Relative);
-            //    ImageSource imgSource = new BitmapImage(uri);
-            //    imgCar.Source = imgSource;
-            //}
+
         }
 
         private void CbMerkki_SelectionChanged(object sender, SelectionChangedEventArgs e)
