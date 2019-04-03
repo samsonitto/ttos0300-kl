@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfPelaajat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPelaajat"
+        mc:Ignorable="d"
+        Title="Pelaajat@SQLite " Height="350" Width="405" FontFamily="Stencil">
+    <DockPanel Background="AliceBlue" LastChildFill="True">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Tiedosto nimi</TextBlock>
+                <TextBox x:Name="txtFilename" Text="F:\KT-ohjelmointi\TTOS0300Demot\WpfPelaajat\DemoPelaajat.sqlite" Width="390"/>
+            </StackPanel>
+            <StatusBar>
+                <StatusBarItem>
+                    <TextBlock x:Name="lblMessages" Text="Messages comes here..." FontFamily="Tahoma" FontSize="10" Height="12" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                </StatusBarItem>
+            </StatusBar>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Left" Width="125" Background="#FF3AC5EE" HorizontalAlignment="Left" >
+            <Button x:Name="btnGetPlayers" Content="Hae pelaajat" Margin="5" Click="btnGetPlayers_Click" />
+            <Button x:Name="btnClose" Content="Sulje" Margin="5" Click="btnClose_Click" />
+            <Separator BorderThickness="0,2,0,5" BorderBrush="#FF170DE8"></Separator>
+            <TextBlock>Nimi:</TextBlock>
+            <TextBox x:Name="txtName"></TextBox>
+            <TextBlock>Joukkue:</TextBlock>
+            <TextBox x:Name="txtTeam"></TextBox>
+            <Button x:Name="btnAdd" Content="Lisää" Margin="5" Click="btnAdd_Click" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Left">
+            <DataGrid x:Name="dgPlayers" ItemsSource="{Binding}" HorizontalAlignment="Left" MouseDoubleClick="dgPlayers_MouseDoubleClick"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

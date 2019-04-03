@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMDemo", "MVVMDemo\MVVMDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMySql19K", "WpfMySql19K\WpfMySql19K.csproj", "{C7657547-F02B-42C0-ADF9-CFC05FD69A87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPelaajat", "WpfPelaajat\WpfPelaajat.csproj", "{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C7657547-F02B-42C0-ADF9-CFC05FD69A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7657547-F02B-42C0-ADF9-CFC05FD69A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7657547-F02B-42C0-ADF9-CFC05FD69A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
