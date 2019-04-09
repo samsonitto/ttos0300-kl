@@ -1,0 +1,63 @@
+//REST Demon materiaalit 
+//last update 8.4.2019
+
+<!-- Käyttöliittymä -->
+<Window x:Class="WpfRESTDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfRESTDemo"
+        mc:Ignorable="d"
+        Title="VR REST Client" Height="350" Width="525">
+  <DockPanel LastChildFill="True">
+    <DockPanel.Background>
+      <ImageBrush ImageSource="Resources/VR.PNG" Opacity="0.5"/>
+    </DockPanel.Background>
+
+    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
+        <ComboBox x:Name="cbStations" ItemsSource="{Binding}"  Margin="5"/>
+        <Button x:Name="btnGetTrains" Content="Hae lähtevät junat" Margin="5" Click="btnGetTrains_Click"/>
+        <Image x:Name="imVR" Source="Resources/VR.PNG" Height="30" Margin="2"/>
+        
+      </StackPanel>
+    <StatusBar DockPanel.Dock="Bottom">
+      <StatusBarItem>
+        <TextBlock x:Name="tbMessage" Text="..." />
+      </StatusBarItem>
+    </StatusBar>
+    <!-- tämä täyttäkööt lopun -->
+    <DataGrid x:Name="dgData"  Margin="10,10,10,0" VerticalAlignment="Top" ItemsSource="{Binding}"/>
+  </DockPanel>
+</Window>
+
+//Model eli Businesslogiiika
+//BLTRains.cs
+using System;
+using Newtonsoft.Json;
+
+namespace JAMK.IT
+{
+  public class Train
+  {
+    public string TrainNumber { get; set; }
+    [JsonProperty("cancelled")]
+    public bool Peruutettu { get; set; }
+    [JsonProperty("departureDate")]
+    public DateTime Pvm { get; set; }
+    public string TargetStation { get; set; }
+  }
+  public class Station
+  {
+    [JsonProperty("stationName")]
+    public string Name { get; set; }
+    [JsonProperty("stationShortCode")]
+    public string Code { get; set; }
+    public Station(string koodi, string kaupunki)
+    {
+      this.Code = koodi;
+      this.Name = kaupunki;
+    }
+  }
+
+}

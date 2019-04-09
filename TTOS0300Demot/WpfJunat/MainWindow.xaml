@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfJunat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfJunat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <DockPanel.Background>
+            <ImageBrush ImageSource="Resources/VR.PNG" Opacity="0.5"/>
+        </DockPanel.Background>
+
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" >
+            <ComboBox x:Name="cbStations" ItemsSource="{Binding}"  Margin="5"/>
+            <Button x:Name="btnGetTrains" Content="Hae lähtevät junat" Margin="5" Click="btnGetTrains_Click"/>
+            <Image x:Name="imVR" Source="Resources/VR.PNG" Height="30" Margin="2"/>
+
+        </StackPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock x:Name="tbMessage" Text="..." />
+            </StatusBarItem>
+        </StatusBar>
+        <!-- tämä täyttäkööt lopun -->
+        <DataGrid x:Name="dgData"  Margin="10,10,10,0" VerticalAlignment="Top" ItemsSource="{Binding}"/>
+    </DockPanel>
+</Window>

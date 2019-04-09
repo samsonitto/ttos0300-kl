@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMySql19K", "WpfMySql19K\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPelaajat", "WpfPelaajat\WpfPelaajat.csproj", "{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfJunat", "WpfJunat\WpfJunat.csproj", "{0D20E065-17D6-4216-9273-7ECE51409E83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D0B9B1A-6E88-4A0D-A3B7-6ADC93F26D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D20E065-17D6-4216-9273-7ECE51409E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D20E065-17D6-4216-9273-7ECE51409E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D20E065-17D6-4216-9273-7ECE51409E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D20E065-17D6-4216-9273-7ECE51409E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
